@@ -32,3 +32,20 @@ Route::post('/login', [AuthController::class, 'Login']);
 Route::post('/Hackathon/creation',[HackathonController::class,'Create']);
 
 Route::put('/Hackathon/update/{id_hackathon}',[HackathonController::class,'Update']);
+
+Route::post('/Regle/create', [RégleController::class, 'create']);
+
+Route::delete('/Regle/delete/{id}', [RégleController::class, 'deleteRégle']);
+
+Route::put('/Regle/update/{id}', [RégleController::class, 'updateRégle']);
+
+Route::get('/Regle/read/{id}', [RégleController::class, 'readRégle']);
+
+
+Route::post('/Equipe/create', [EquipeController::class, 'CreateEquipe']);
+
+Route::delete('/Equipe/delete/{id}', [EquipeController::class, 'DeleteEquipe']);
+
+Route::put('/Equipe/update/{id}', [EquipeController::class, 'UpdateEquipe']);
+
+Route::get('/Equipe/{id}', [EquipeController::class, 'GetEquipeByID']);
